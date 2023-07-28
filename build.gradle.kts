@@ -39,10 +39,10 @@ application {
 tasks {
     withType<ShadowJar> {
         configurations = listOf(runtime)
-        destinationDirectory.set(file("${System.getProperty("user.home")}/.weave/mods"))
+        destinationDir = file("${buildDir}/libs")
     }
     named<Jar>("jar") {
-        enabled = false
+        enabled = true
     }
     build {
         dependsOn("shadowJar")
