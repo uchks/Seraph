@@ -42,7 +42,7 @@ tasks {
         destinationDirectory.set(file("${System.getProperty("user.home")}/.weave/mods"))
     }
     named<Jar>("jar") {
-        enabled = false
+        enabled = true
     }
     build {
         dependsOn("shadowJar")
