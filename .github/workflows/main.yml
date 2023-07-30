@@ -75,4 +75,4 @@ jobs:
           draft: false
           prerelease: false
           files:  |
-            ./.weave/mods/*
+            ./build/libs/*
