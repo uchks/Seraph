@@ -42,6 +42,7 @@ tasks {
         destinationDirectory.set(file("${System.getProperty("user.home")}/.weave/mods"))
     }
     named<Jar>("jar") {
+        configurations = listOf(runtime)
         enabled = true
     }
     build {
