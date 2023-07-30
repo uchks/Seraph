@@ -37,8 +37,14 @@ application {
 }
 
 tasks {
-    named<Jar>("jar") {
+    withType<ShadowJar> {
         configurations = listOf(runtime)
-        enabled = true
+        destinationDirectory.set(file("/build/libs"))
+    }
+    named<Jar>("jar") {
+        enabled = false
+    }
+    build {
+        dependsOn("shadowJar")
     }
 }
