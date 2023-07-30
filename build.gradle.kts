@@ -39,7 +39,7 @@ application {
 tasks {
     withType<ShadowJar> {
         configurations = listOf(runtime)
-        destinationDir = file("${buildDir}/build/libs"))
+        destinationDir = file("${buildDir}/build/libs")
     }
     named<Jar>("jar") {
         enabled = false
