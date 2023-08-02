@@ -64,7 +64,7 @@ jobs:
       - name: Build
         uses: gradle/gradle-build-action@v2.4.2
         with:
-          arguments: build
+          arguments: shadowJar
           
       - name: Create Release
         if: ${{ inputs.create_release }}
